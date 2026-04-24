@@ -18,7 +18,7 @@ We'll use the ant build tool (`https://ant.apache.org/manual/installlist.html`) 
 
 ## Optional Working Files
 You may draft your answers in local markdown files (for example under `docs/`) while working, but these files are optional and are not required for grading.
-All written graded content must appear in `HW2_answers.pdf`.
+All written graded content must appear in `HW3_answers.pdf`.
 
 ## Build and Run
 
@@ -42,8 +42,8 @@ From the root directory (containing the build.xml file):
 
 <!-- 2. Run the app: `java -cp bin ExpenseTrackerApp` -->
 2. Run the app:
-   - On Windows: `java -cp "bin;lib\xchart-3.8.8.jar;lib\tinylog-impl-2.7.0..jar" ExpenseTrackerApp`
-   - On Linux/macOS: `java -cp "bin:lib/xchart-3.8.8.jar:lib/tinylog-impl-2.7.0..jar" ExpenseTrackerApp`
+   - On Windows: `java -cp "bin;lib\xchart-3.8.8.jar;lib\tinylog-api-2.7.0.jar;lib\tinylog-impl-2.7.0.jar" ExpenseTrackerApp`
+   - On Linux/macOS: `java -cp "bin:lib/xchart-3.8.8.jar:lib/tinylog-api-2.7.0.jar:lib/tinylog-impl-2.7.0.jar" ExpenseTrackerApp`
 
 3. Build and run tests: `ant test` (See the build/TEST-*.txt files for more details.)
 

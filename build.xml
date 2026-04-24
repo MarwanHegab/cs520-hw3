@@ -3,7 +3,8 @@
     <property name="checkstyle.jar" value="lib/checkstyle-13.2.0-all.jar"/>
     <property name="junit.jar" value="lib/junit-4.11.jar"/>
     <property name="xchart.jar" value="lib/xchart-3.8.8.jar"/>
-    <property name="tinylog.jar" value="lib/tinylog-impl-2.7.0.jar"/>
+    <property name="tinylog-api.jar" value="lib/tinylog-api-2.7.0.jar"/>
+    <property name="tinylog-impl.jar" value="lib/tinylog-impl-2.7.0.jar"/>
     
     <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
         <classpath path="lib/jacocoant.jar"/>
@@ -37,7 +38,8 @@
 		 windowtitle="CS520 - Homework 3">
 	    <fileset dir="src"/>
             <classpath location="${xchart.jar}"/>
-	    <classpath location="${tinylog.jar}"/>
+	    <classpath location="${tinylog-api.jar}"/>
+	    <classpath location="${tinylog-impl.jar}"/>
 	</javadoc>
     </target>
 
@@ -49,7 +51,8 @@
                debug="yes">
 	    <classpath path="bin"/>
             <classpath location="${xchart.jar}"/>
-	    <classpath location="${tinylog.jar}"/>
+	    <classpath location="${tinylog-api.jar}"/>
+	    <classpath location="${tinylog-impl.jar}"/>
         </javac>
     </target>
 
@@ -61,7 +64,8 @@
                debug="yes">
         	<classpath location="${junit.jar}"/>
         	<classpath location="${xchart.jar}"/>
-		<classpath location="${tinylog.jar}"/>
+		<classpath location="${tinylog-api.jar}"/>
+		<classpath location="${tinylog-impl.jar}"/>
         </javac>
     </target>
 
@@ -79,7 +83,8 @@
 	        	<classpath path="bin"/>
 	        	<classpath location="${junit.jar}"/>
 	    		<classpath location="${xchart.jar}"/>
-			<classpath location="${tinylog.jar}"/>
+			<classpath location="${tinylog-api.jar}"/>
+			<classpath location="${tinylog-impl.jar}"/>
 	    	</junit>
 		</jacoco:coverage>
 	</target> 
