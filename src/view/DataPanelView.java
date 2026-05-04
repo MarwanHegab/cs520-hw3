@@ -36,10 +36,17 @@ public class DataPanelView extends JPanel {
 	    // Create UI components
 	    JLabel amountLabel = new JLabel("Amount:");
 	    amountField = new JTextField(10);
+	    amountField.getAccessibleContext().setAccessibleName("Amount Input");
+	    amountField.getAccessibleContext().setAccessibleDescription("Enter the numerical amount for the new transaction.");
 	    
 	    JLabel categoryLabel = new JLabel("Category:");
 	    categoryField = new JTextField(10);
+	    categoryField.getAccessibleContext().setAccessibleName("Category Input");
+	    categoryField.getAccessibleContext().setAccessibleDescription("Enter the category name for the new transaction.");
+	    
 	    transactionsTable = new JTable(transactionsModel);
+	    transactionsTable.getAccessibleContext().setAccessibleName("Transactions Data Table");
+	    transactionsTable.getAccessibleContext().setAccessibleDescription("A table displaying the list of all entered transactions and their total cost.");
 	    transactionsTable.setDefaultEditor(Object.class, null);
 	    transactionsTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 	    
