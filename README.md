@@ -86,3 +86,9 @@ The Expense Tracker application applies the MVC architecture pattern as follows:
   In that tab, select the analysis time window (e.g., 'Last week')
   In the tab, click the 'Analyze' button
   If there are transactions in that time window, displays the analysis results. If not, displays an error message.
+
+# New features:
+Added logging statements inside the following files:
+ExpenseTrackerApp.java, ExpenseTrackerController.java, ExpenseTrackerModel.java, CSVImporter.java, CSVExporter.java, AnalysisPanelView.java
+Used tinylog for logging by importing it as import org.tinylog.Logger
+Generated usage-scenerio-log.txt file as well
