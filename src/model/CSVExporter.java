@@ -3,6 +3,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
+import org.tinylog.Logger;
 
 /**
  * CSV (Comma Separated Value) implementation of {@link TransactionExporter}.
@@ -11,6 +12,7 @@ public class CSVExporter implements TransactionExporter, CSVConstants {
   
   @Override
   public String exportTransactions(List<Transaction> txns, String filename) {
+    Logger.info("Starting CSV export to file: {}", filename);
     if (txns == null) return TRANSACTION_LIST_ERROR_MESSAGE;
     if (!InputValidation.isValidFilename(filename)) return FILENAME_ERROR_MESSAGE;
 
@@ -23,6 +25,7 @@ public class CSVExporter implements TransactionExporter, CSVConstants {
         bw.newLine();
       }
       bw.flush();
+      Logger.info("CSV export completed successfully");
       return null;
     } catch (IOException e) {
       return e.getMessage();

@@ -6,12 +6,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+import org.tinylog.Logger;
 
 
 public class CSVImporter implements CSVConstants {
 	public List<Transaction> importTransactions(String inputFileName) throws IOException {
 		List<Transaction> importedTransactionsList = null;
-		if (inputFileName != null) {	
+		if (inputFileName != null) {
+			Logger.info("Starting CSV import from file: {}", inputFileName);	
 			BufferedReader reader = new BufferedReader(new FileReader(inputFileName));
 			importedTransactionsList = new ArrayList<Transaction>();
 			
@@ -30,6 +32,7 @@ public class CSVImporter implements CSVConstants {
 				}
 				currentLineNumber++;
 			}
+			Logger.info("CSV import completed successfully");
 
 			reader.close();
 		}

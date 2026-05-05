@@ -1,0 +1,102 @@
+2026-05-04 15:11:09 [main] ExpenseTrackerApp.main()
+INFO: Expense Tracker application started
+2026-05-04 15:11:09 [main] model.ExpenseTrackerModel.<init>()
+INFO: ExpenseTrackerModel initialized with an empty transaction list
+2026-05-04 15:11:11 [main] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computing total cost for transactions
+2026-05-04 15:11:11 [main] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computed transaction total cost
+2026-05-04 15:11:11 [main] controller.ExpenseTrackerController.<init>()
+INFO: Expense Tracker view is visible
+2026-05-04 15:11:21 [AWT-EventQueue-0] controller.ExpenseTrackerController.lambda$new$0()
+INFO: Add Transaction button clicked
+2026-05-04 15:11:21 [AWT-EventQueue-0] controller.ExpenseTrackerController.addTransaction()
+INFO: Starting add transaction operation
+2026-05-04 15:11:21 [AWT-EventQueue-0] model.ExpenseTrackerModel.addTransaction()
+INFO: Adding transaction to model
+2026-05-04 15:11:21 [AWT-EventQueue-0] model.ExpenseTrackerModel.addTransaction()
+INFO: Transaction added to model
+2026-05-04 15:11:21 [AWT-EventQueue-0] controller.ExpenseTrackerController.addTransaction()
+INFO: Transaction added successfully
+2026-05-04 15:11:21 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computing total cost for transactions
+2026-05-04 15:11:21 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computed transaction total cost
+2026-05-04 15:11:29 [AWT-EventQueue-0] controller.ExpenseTrackerController.lambda$new$0()
+INFO: Add Transaction button clicked
+2026-05-04 15:11:29 [AWT-EventQueue-0] controller.ExpenseTrackerController.addTransaction()
+INFO: Starting add transaction operation
+2026-05-04 15:11:41 [AWT-EventQueue-0] controller.ExpenseTrackerController.lambda$new$0()
+INFO: Add Transaction button clicked
+2026-05-04 15:11:41 [AWT-EventQueue-0] controller.ExpenseTrackerController.addTransaction()
+INFO: Starting add transaction operation
+2026-05-04 15:11:41 [AWT-EventQueue-0] model.ExpenseTrackerModel.addTransaction()
+INFO: Adding transaction to model
+2026-05-04 15:11:41 [AWT-EventQueue-0] model.ExpenseTrackerModel.addTransaction()
+INFO: Transaction added to model
+2026-05-04 15:11:41 [AWT-EventQueue-0] controller.ExpenseTrackerController.addTransaction()
+INFO: Transaction added successfully
+2026-05-04 15:11:41 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computing total cost for transactions
+2026-05-04 15:11:41 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computed transaction total cost
+2026-05-04 15:11:50 [AWT-EventQueue-0] controller.ExpenseTrackerController.lambda$new$0()
+INFO: Add Transaction button clicked
+2026-05-04 15:11:50 [AWT-EventQueue-0] controller.ExpenseTrackerController.addTransaction()
+INFO: Starting add transaction operation
+2026-05-04 15:11:50 [AWT-EventQueue-0] model.ExpenseTrackerModel.addTransaction()
+INFO: Adding transaction to model
+2026-05-04 15:11:50 [AWT-EventQueue-0] model.ExpenseTrackerModel.addTransaction()
+INFO: Transaction added to model
+2026-05-04 15:11:50 [AWT-EventQueue-0] controller.ExpenseTrackerController.addTransaction()
+INFO: Transaction added successfully
+2026-05-04 15:11:50 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computing total cost for transactions
+2026-05-04 15:11:50 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computed transaction total cost
+2026-05-04 15:12:18 [AWT-EventQueue-0] controller.ExpenseTrackerController.lambda$new$1()
+INFO: Delete item clicked
+2026-05-04 15:12:18 [AWT-EventQueue-0] controller.ExpenseTrackerController.delete()
+INFO: Starting delete transaction operation
+2026-05-04 15:12:18 [AWT-EventQueue-0] model.ExpenseTrackerModel.removeTransaction()
+INFO: Removing transaction from model
+2026-05-04 15:12:18 [AWT-EventQueue-0] model.ExpenseTrackerModel.removeTransaction()
+INFO: Transaction removed from model
+2026-05-04 15:12:18 [AWT-EventQueue-0] controller.ExpenseTrackerController.delete()
+INFO: Transaction deleted successfully
+2026-05-04 15:12:18 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computing total cost for transactions
+2026-05-04 15:12:18 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computed transaction total cost
+2026-05-04 15:12:24 [AWT-EventQueue-0] controller.ExpenseTrackerController.lambda$new$4()
+INFO: Analyze button clicked
+2026-05-04 15:12:24 [AWT-EventQueue-0] view.AnalysisPanelView.performDataAnalysis()
+INFO: Performing data analysis
+2026-05-04 15:12:24 [AWT-EventQueue-0] view.AnalysisPanelView.createCategoryChart()
+INFO: Creating category chart for selected time window
+2026-05-04 15:12:24 [AWT-EventQueue-0] model.ExpenseTrackerModel.<init>()
+INFO: ExpenseTrackerModel initialized with an empty transaction list
+2026-05-04 15:12:24 [AWT-EventQueue-0] model.ExpenseTrackerModel.addTransaction()
+INFO: Adding transaction to model
+2026-05-04 15:12:24 [AWT-EventQueue-0] model.ExpenseTrackerModel.addTransaction()
+INFO: Transaction added to model
+2026-05-04 15:12:24 [AWT-EventQueue-0] model.ExpenseTrackerModel.<init>()
+INFO: ExpenseTrackerModel initialized with an empty transaction list
+2026-05-04 15:12:24 [AWT-EventQueue-0] model.ExpenseTrackerModel.addTransaction()
+INFO: Adding transaction to model
+2026-05-04 15:12:24 [AWT-EventQueue-0] model.ExpenseTrackerModel.addTransaction()
+INFO: Transaction added to model
+2026-05-04 15:12:24 [AWT-EventQueue-0] view.AnalysisPanelView.createCategoryChart()
+INFO: Category chart created
+2026-05-04 15:12:24 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computing total cost for transactions
+2026-05-04 15:12:24 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computed transaction total cost
+2026-05-04 15:12:24 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computing total cost for transactions
+2026-05-04 15:12:24 [AWT-EventQueue-0] model.ExpenseTrackerModel.computeTransactionsTotalCost()
+INFO: Computed transaction total cost
+2026-05-04 15:12:24 [AWT-EventQueue-0] view.AnalysisPanelView.createCategoryChart()
+INFO: Category chart series added successfully
+2026-05-04 15:12:24 [AWT-EventQueue-0] view.AnalysisPanelView.performDataAnalysis()
+INFO: Data analysis completed successfully and chart panel was displayed

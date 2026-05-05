@@ -24,6 +24,7 @@ import org.knowm.xchart.XChartPanel;
 
 import model.ExpenseTrackerModel;
 import model.InputValidation;
+import org.tinylog.Logger;
 
 /**
  * The AnalsisPanelView class supports performing data analysis on the model
@@ -117,6 +118,7 @@ public class AnalysisPanelView extends JPanel
 	 * @return A bar chart displaying the total cost per category
 	 */
 	protected CategoryChart createCategoryChart(ExpenseTrackerModel model) {
+		Logger.info("Creating category chart for selected time window");
 		Map<String,ExpenseTrackerModel> categorySummary = DataVizUtils.computeCategorySummary(model, this.timeWindowChooser.getSelectedIndex());
 		// Perform input validation to check that there were 
 		// transactions in the specified time window.
@@ -133,6 +135,8 @@ public class AnalysisPanelView extends JPanel
 				.xAxisTitle(CHART_X_AXIS_TITLE)
 				.yAxisTitle(CHART_Y_AXIS_TITLE)
 				.build();
+		
+		Logger.info("Category chart created");
 
 		// Customize Chart
 		chart.getStyler().setLegendVisible(false);
@@ -151,6 +155,7 @@ public class AnalysisPanelView extends JPanel
 		}
 		chart.addSeries(CHART_TITLE, Arrays.asList(InputValidation.VALID_CATEGORIES), xAxisSeries);
 		chart.setTitle(CHART_TITLE);
+		Logger.info("Category chart series added successfully");
 		
 		return chart;
 	}
@@ -162,6 +167,7 @@ public class AnalysisPanelView extends JPanel
 	 * @param model Represents the model's current state
 	 */
 	public void performDataAnalysis(ExpenseTrackerModel model) {
+		Logger.info("Performing data analysis");
 		if (model.getTransactions().isEmpty()) {
 			this.messageLabel.setText(NO_TRANSACTIONS_ERROR_MESSAGE);
 			this.messageLabel.setVisible(true);
@@ -183,6 +189,7 @@ public class AnalysisPanelView extends JPanel
 				this.dataVizPanel.add(this.chartPanel, BorderLayout.CENTER);
 				this.dataVizPanel.revalidate();
 				this.dataVizPanel.repaint();
+				Logger.info("Data analysis completed successfully and chart panel was displayed");
 			}
 		}
 	}

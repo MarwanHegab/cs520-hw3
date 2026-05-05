@@ -10,6 +10,7 @@ import model.ExpenseTrackerModel;
 import model.InputValidation;
 import model.Transaction;
 import view.ExpenseTrackerView;
+import org.tinylog.Logger;
 
 /**
  * Provides the application programming layer to support the
@@ -28,31 +29,37 @@ public class ExpenseTrackerController {
     	
         // Handle add transaction button clicks
         view.getDataPanelView().getAddTransactionBtn().addActionListener(e -> {
+			Logger.info("Add Transaction button clicked");
         	addTransaction();
         });
         
         // Handle "Delete" menu item clicks
         view.getDeleteMenuItem().addActionListener(e -> {
+			Logger.info("Delete item clicked");
         	delete();
         });
         
         // Handle "Open File..." menu item clicks
         view.getOpenFileMenuItem().addActionListener(e -> {
+			Logger.info("Open File clicked.");
         	openFile();
         });
         
         // Handle "Save" menu item clicks
-        view.getSaveAsMenuItem().addActionListener(e -> {	  
+        view.getSaveAsMenuItem().addActionListener(e -> {	
+			Logger.info("Save As menu item clicked");  
         	saveAs();
         });
         
         // Handle "Analyze" button clicks
         view.getAnalysisPanelView().getAnalyzeButton().addActionListener(e -> {
+			Logger.info("Analyze button clicked");
         	performDataAnalysis();
         });
         
         // Initialize view
         view.setVisible(true);
+		Logger.info("Expense Tracker view is visible");
     }
     
     public ExpenseTrackerModel getModel() {
@@ -66,7 +73,8 @@ public class ExpenseTrackerController {
     }
     
     public void addTransaction() { 
-    	try {
+    	Logger.info("Starting add transaction operation");
+		try {
     		// Get transaction data from view
     		double amount = view.getDataPanelView().getAmount(); 
     		String category = view.getDataPanelView().getCategory();
@@ -76,6 +84,7 @@ public class ExpenseTrackerController {
 
     		// Call controller to add transaction
     		model.addTransaction(t);
+			Logger.info("Transaction added successfully");
     		view.refresh();
     	}
     	catch (NumberFormatException nfe) {
@@ -87,17 +96,20 @@ public class ExpenseTrackerController {
     }
     
     public void delete() {
+		Logger.info("Starting delete transaction operation");
         int selectedTransactionID = view.getDataPanelView().getSelectedTransactionID();
     	boolean removed = model.removeTransaction(selectedTransactionID);
     	if (! removed) {
     		view.displayErrorMessage("A valid transaction was not selected to be removed.");
     	}
     	else {
+			Logger.info("Transaction deleted successfully");
     		view.refresh();
     	}
     }
     
     public void openFile() {
+		Logger.info("Starting open file operation");
     	String inputFileName = view.showFileChooser(true);
     	if (inputFileName != null) {  	    
     		int transactionCount = model.getTransactions().size();
@@ -111,15 +123,18 @@ public class ExpenseTrackerController {
     			for (Transaction importedTransaction : importedTransactionsList) {				
     				model.addTransaction(importedTransaction);
     			}
+				Logger.info("Open file operation completed successfully.");	
     		}
     		catch (IOException ioe) {
     			view.displayErrorMessage(ioe.getMessage());
     		}
     		view.refresh();
+			Logger.info("View refreshed after open file operation.");
     	}
     }
     
     public void saveAs() {
+		Logger.info("Starting save as operation");
     	String outputFileName = view.showFileChooser(false);
     	if (outputFileName != null) {
     		CSVExporter csvExporter = new CSVExporter();
