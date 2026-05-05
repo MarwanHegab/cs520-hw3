@@ -88,7 +88,11 @@ The Expense Tracker application applies the MVC architecture pattern as follows:
   If there are transactions in that time window, displays the analysis results. If not, displays an error message.
 
 # New features:
-Added logging statements inside the following files:
-ExpenseTrackerApp.java, ExpenseTrackerController.java, ExpenseTrackerModel.java, CSVImporter.java, CSVExporter.java, AnalysisPanelView.java
-Used tinylog for logging by importing it as import org.tinylog.Logger
-Generated usage-scenerio-log.txt file as well
+* **Logging:**
+  Added logging statements inside the following files:
+  ExpenseTrackerApp.java, ExpenseTrackerController.java, ExpenseTrackerModel.java, CSVImporter.java, CSVExporter.java, AnalysisPanelView.java
+  Used tinylog for logging by importing it as import org.tinylog.Logger
+  Generated usage-scenario-log.txt file as well
+
+* **Accessibility:**
+  Added accessibility features (`setAccessibleName` and `setAccessibleDescription`) to the input fields and data tables in `src/view/DataPanelView.java` to support screen readers.

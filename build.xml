@@ -2,6 +2,7 @@
 
     <property name="checkstyle.jar" value="lib/checkstyle-13.2.0-all.jar"/>
     <property name="junit.jar" value="lib/junit-4.11.jar"/>
+    <property name="hamcrest.jar" value="lib/hamcrest-core-1.3.jar"/>
     <property name="xchart.jar" value="lib/xchart-3.8.8.jar"/>
     <property name="tinylog-api.jar" value="lib/tinylog-api-2.7.0.jar"/>
     <property name="tinylog-impl.jar" value="lib/tinylog-impl-2.7.0.jar"/>
@@ -63,6 +64,7 @@
                destdir="bin"
                debug="yes">
         	<classpath location="${junit.jar}"/>
+        	<classpath location="${hamcrest.jar}"/>
         	<classpath location="${xchart.jar}"/>
 		<classpath location="${tinylog-api.jar}"/>
 		<classpath location="${tinylog-impl.jar}"/>
@@ -82,6 +84,7 @@
 	    		<test name="ExpenseTrackerTest"/>
 	        	<classpath path="bin"/>
 	        	<classpath location="${junit.jar}"/>
+	        	<classpath location="${hamcrest.jar}"/>
 	    		<classpath location="${xchart.jar}"/>
 			<classpath location="${tinylog-api.jar}"/>
 			<classpath location="${tinylog-impl.jar}"/>
